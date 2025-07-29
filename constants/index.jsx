@@ -6,6 +6,7 @@ import {
   Rocket,
   Brain,
 } from "lucide-react";
+import { title } from "process";
 
 export const navItems = [
   { name: "About", link: "#about" },
@@ -91,37 +92,37 @@ export const testimonials = [
 export const features = [
   {
     icon: <Code2 />,
-    text: "Clean & Efficient Code",
+    title: "Clean & Efficient Code",
     description:
       "I write scalable, maintainable code with a focus on performance and best practices.",
   },
   {
     icon: <Lightbulb />,
-    text: "Creative Problem Solving",
+    title: "Creative Problem Solving",
     description:
       "I enjoy tackling challenges with a mix of logic, creativity, and curiosity.",
   },
   {
     icon: <Users />,
-    text: "Team Collaboration",
+    title: "Team Collaboration",
     description:
       "I'm a strong communicator who thrives in collaborative environments.",
   },
   {
     icon: <LayoutDashboard />,
-    text: "UI/UX Mindset",
+    title: "UI/UX Mindset",
     description:
       "I care about building user-friendly interfaces that are both functional and visually appealing.",
   },
   {
     icon: <Rocket />,
-    text: "Fast Learning",
+    title: "Fast Learning",
     description:
       "I quickly pick up new technologies and adapt to different workflows with ease.",
   },
   {
     icon: <Brain />,
-    text: "Growth-Oriented",
+    title: "Growth-Oriented",
     description:
       "I'm always improving — whether it's sharpening my skills or exploring new areas of development.",
   },
