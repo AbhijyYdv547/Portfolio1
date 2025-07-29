@@ -5,6 +5,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import Image from "next/image";
 import { PinContainer } from "./ui/3d-pin";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -24,20 +25,15 @@ const Projects = () => {
         </h2>
       </motion.div>
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-2">
-        {projects.map(({ id, title, des, img, iconLists, link }) => (
+        {projects.map(({ id, title, des, img, link, iconLists }) => (
           <div
             key={id}
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-96 w-[80vw]"
           >
-            <PinContainer title="Project" href={link}>
+            <PinContainer title={title} href={link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[30vh] mb-10 sm:h-[40vh]">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <Image
-                    src="/code.jpg"
-                    alt="bg-img"
-                    width={800}
-                    height={500}
-                  />
+                  <Image src={img} alt="bg-img" width={800} height={500} />
                 </div>
                 <Image
                   src={img}
@@ -60,7 +56,7 @@ const Projects = () => {
                   {iconLists.map((icon, index) => (
                     <div
                       key={icon}
-                      className="border border-white/[0.2] rounded-full bg-black lg:w-10 flex justify-center items-center w-8 h-8"
+                      className="border border-gray-900 rounded-full bg-white lg:w-10 flex justify-center items-center w-8 h-8"
                       style={{ transform: `translateX(-${5 * index * 2}px)` }}
                     >
                       <Image
@@ -75,8 +71,8 @@ const Projects = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
+                  <p className="flex lg:text-xs md:text-sm text-sm text-purple">
+                    Checkout Project
                   </p>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </div>

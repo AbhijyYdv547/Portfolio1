@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Workflow from "@/components/Workflow";
 import HeroSection from "@/components/HeroSection";
@@ -17,7 +16,6 @@ export default function Home() {
         <Projects />
         <Workflow />
         <Testimonials />
-        <Footer />
       </div>
     </Loader>
   );

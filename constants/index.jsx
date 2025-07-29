@@ -5,8 +5,9 @@ import {
   LayoutDashboard,
   Rocket,
   Brain,
+  ServerCog,
+  Globe,
 } from "lucide-react";
-import { title } from "process";
 
 export const navItems = [
   { name: "About", link: "#about" },
@@ -18,74 +19,47 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/code.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "NeuroNote - Real-time Collaborative App",
+    des: "A full-stack collaboration platform with real-time text editing, chat, and planned video calling. Built with Tiptap, Hocuspocus, and a fully Dockerized setup.",
+    img: "/neuronote.jpg",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/postgres.svg",
+      "/docker.svg",
+    ],
+    link: "https://github.com/abs-codes/neuronote",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/code.jpg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "CollabCanvas - Real-time Drawing App",
+    des: "A WebSocket-powered collaborative canvas app with live drawing, room-based sessions, zooming, and multiple drawing tools.",
+    img: "/collabcanvas.jpg",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/socket.svg",
+      "/docker.svg",
+    ],
+    link: "https://github.com/abs-codes/collab-canvas",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/code.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "Resume Builder",
+    des: "A modern web app where users can generate AI-powered resumes using Gemini API. Includes auth, PDF download, and form-based UI.",
+    img: "/resume.jpg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/prisma.svg"],
+    link: "https://github.com/abs-codes/ai-resume-generator",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/code.jpg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
-  },
-];
-
-export const testimonials = [
-  {
-    user: "John Doe",
-    company: "Stellar Solutions",
-    image: "/profile-pictures/user1.jpg",
-    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
-  },
-  {
-    user: "Jane Smith",
-    company: "Blue Horizon Technologies",
-    image: "/profile-pictures/user2.jpg",
-    text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life",
-  },
-  {
-    user: "David Johnson",
-    company: "Quantum Innovations",
-    image: "/profile-pictures/user3.jpg",
-    text: "Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.",
-  },
-  {
-    user: "Ronee Brown",
-    company: "Fusion Dynamics",
-    image: "/profile-pictures/user4.jpg",
-    text: "Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
-  },
-  {
-    user: "Michael Wilson",
-    company: "Visionary Creations",
-    image: "/profile-pictures/user5.jpg",
-    text: "I am amazed by the level of professionalism and dedication shown by the team. They were able to exceed our expectations and deliver outstanding results.",
-  },
-  {
-    user: "Emily Davis",
-    company: "Synergy Systems",
-    image: "/profile-pictures/user6.jpg",
-    text: "The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.",
+    title: "Typora - Tally Alternative",
+    des: "A lightweight, open-source alternative to Tally for building embeddable, customizable forms — focused on performance and simplicity.",
+    img: "/typora.jpg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/postgres.svg"],
+    link: "https://github.com/abs-codes/typora",
   },
 ];
 
@@ -94,40 +68,51 @@ export const features = [
     icon: <Code2 />,
     title: "Clean & Efficient Code",
     description:
-      "I write scalable, maintainable code with a focus on performance and best practices.",
+      "I write scalable, maintainable code with a strong focus on performance, readability, and best practices.",
   },
   {
     icon: <Lightbulb />,
-    title: "Creative Problem Solving",
+    title: "Creative Problem Solver",
     description:
-      "I enjoy tackling challenges with a mix of logic, creativity, and curiosity.",
+      "I love breaking down complex problems and crafting simple, elegant solutions — especially in real-time systems.",
   },
   {
     icon: <Users />,
-    title: "Team Collaboration",
+    title: "Collaboration-Driven",
     description:
-      "I'm a strong communicator who thrives in collaborative environments.",
+      "From team projects to open source contributions, I thrive in collaborative environments and value clear communication.",
   },
   {
     icon: <LayoutDashboard />,
-    title: "UI/UX Mindset",
+    title: "Full-Stack Builder",
     description:
-      "I care about building user-friendly interfaces that are both functional and visually appealing.",
+      "From UI to APIs, I design and build complete web apps using modern stacks like Next.js, Prisma, and PostgreSQL.",
   },
   {
     icon: <Rocket />,
-    title: "Fast Learning",
+    title: "Rapid Learner",
     description:
-      "I quickly pick up new technologies and adapt to different workflows with ease.",
+      "I dive deep into new technologies quickly — whether it’s setting up CI/CD pipelines or exploring new frameworks.",
+  },
+  {
+    icon: <ServerCog />,
+    title: "DevOps Enthusiast",
+    description:
+      "I care about scalable infrastructure, Dockerization, CI/CD, and efficient developer workflows.",
   },
   {
     icon: <Brain />,
-    title: "Growth-Oriented",
+    title: "Always Growing",
     description:
-      "I'm always improving — whether it's sharpening my skills or exploring new areas of development.",
+      "I actively seek feedback, refine my skills, and push myself to become a better engineer every day.",
+  },
+  {
+    icon: <Globe />,
+    title: "Open Source Explorer",
+    description:
+      "I'm passionate about contributing to open source and building in public — with a goal of joining programs like GSoC and LFX.",
   },
 ];
-
 export const checklistItems = [
   {
     title: "Code merge made easy",
@@ -151,59 +136,35 @@ export const checklistItems = [
   },
 ];
 
-export const pricingOptions = [
+export const testimonials = [
   {
-    title: "Free",
-    price: "$0",
-    features: [
-      "Private board sharing",
-      "5 Gb Storage",
-      "Web Analytics",
-      "Private Mode",
-    ],
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael",
+    title: "Director of AlphaStream Technologies",
   },
   {
-    title: "Pro",
-    price: "$10",
-    features: [
-      "Private board sharing",
-      "10 Gb Storage",
-      "Web Analytics (Advance)",
-      "Private Mode",
-    ],
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael Johnson",
+    title: "Director of AlphaStream Technologies",
   },
   {
-    title: "Enterprise",
-    price: "$200",
-    features: [
-      "Private board sharing",
-      "Unlimited Storage",
-      "High Performance Network",
-      "Private Mode",
-    ],
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael Jordan",
+    title: "Director of AlphaStream Technologies",
   },
-];
-
-export const resourcesLinks = [
-  { href: "#", text: "Getting Started" },
-  { href: "#", text: "Documentation" },
-  { href: "#", text: "Tutorials" },
-  { href: "#", text: "API Reference" },
-  { href: "#", text: "Community Forums" },
-];
-
-export const platformLinks = [
-  { href: "#", text: "Features" },
-  { href: "#", text: "Supported Devices" },
-  { href: "#", text: "System Requirements" },
-  { href: "#", text: "Downloads" },
-  { href: "#", text: "Release Notes" },
-];
-
-export const communityLinks = [
-  { href: "#", text: "Events" },
-  { href: "#", text: "Meetups" },
-  { href: "#", text: "Conferences" },
-  { href: "#", text: "Hackathons" },
-  { href: "#", text: "Jobs" },
+  {
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael John",
+    title: "Director of AlphaStream Technologies",
+  },
+  {
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael son",
+    title: "Director of AlphaStream Technologies",
+  },
 ];
