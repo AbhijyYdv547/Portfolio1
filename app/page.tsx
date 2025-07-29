@@ -5,10 +5,11 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
 import Projects from "@/components/Projects";
+import { Loader } from "@/components/Loader";
 
 export default function Home() {
   return (
-    <>
+    <Loader>
       <Navbar />
       <div className="max-w-7xl mx-auto pt-20 px-6">
         <HeroSection />
@@ -18,6 +19,6 @@ export default function Home() {
         <Testimonials />
         <Footer />
       </div>
-    </>
+    </Loader>
   );
 }
