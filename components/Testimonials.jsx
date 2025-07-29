@@ -1,4 +1,4 @@
-import { testimonials } from "@/utils/index";
+import { testimonials } from "@/constants/index";
 
 const Testimonials = () => {
   return (

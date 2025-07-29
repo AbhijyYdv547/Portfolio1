@@ -2,6 +2,7 @@ import Link from "next/link"; // Correct import for Next.js
 
 const HeroSection = () => {
     return (
+      <>
         <div className="flex flex-col items-center mt-6 lg:mt-20" id="hero">
             <div className=" text-center tracking-wide flex justify-center items-center flex-col gap-2.5">
                 <span className="text-4xl sm:text-6xl lg:text-7xl">
@@ -29,27 +30,10 @@ const HeroSection = () => {
                     Learn more
                 </Link>
             </div>
-            <div className="flex mt-10 justify-center">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    className="rounded-lg w-1/2 border border-blue-500 shadow-sm shadow-blue-400 mx-2 my-4"
-                >
-                    <source src="/video1.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    className="rounded-lg w-1/2 border border-blue-500 shadow-sm shadow-blue-400 mx-2 my-4"
-                >
-                    <source src="/video2.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
         </div>
+        <div className="py-24 bg-background text-foreground border-b border-border"></div>
+      </>
+        
     );
 };
 
