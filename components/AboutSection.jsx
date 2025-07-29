@@ -6,7 +6,7 @@ import { features } from "@/constants/index";
 const AboutSection = () => {
     return (
         <section
-            id="features"
+            id="about"
             className="relative py-24 border-b border-border bg-background text-foreground"
         >
             <motion.div

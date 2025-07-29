@@ -8,10 +8,10 @@ import {
 } from "lucide-react";
 
 export const navItems = [
-  { label: "Features", href: "#" },
-  { label: "Workflow", href: "#" },
-  { label: "Pricing", href: "#" },
-  { label: "Testimonials", href: "#" },
+  { name: 'About', link: '#about' },
+  { name: 'Projects', link: '#projects' },
+  { name: 'Approach', link: '#approach' },
+  { name: 'Contact', link: '#contact' },
 ];
 
 export const testimonials = [
@@ -92,6 +92,7 @@ export const features = [
       "I'm always improving — whether it's sharpening my skills or exploring new areas of development.",
   },
 ];
+
 export const checklistItems = [
   {
     title: "Code merge made easy",

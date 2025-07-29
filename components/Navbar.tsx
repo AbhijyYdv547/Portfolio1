@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { navItems } from "../constants/index";
+import { navItems } from "@/constants/index";
 
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
                     <div className="flex items-center gap-2">
                         <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-lg" />
                         <span className="text-xl font-semibold text-white drop-shadow-sm">
-                            NeuroNote
+                            Abhijay
                         </span>
                     </div>
                 </Link>
@@ -26,9 +26,9 @@ const Navbar = () => {
                 {/* Desktop Nav */}
                 <ul className="hidden lg:flex items-center gap-10 text-sm text-white/80">
                     {navItems.map((item) => (
-                        <li key={item.label}>
-                            <Link href={item.href} className="hover:text-white transition-colors duration-200 drop-shadow-sm">
-                                {item.label}
+                        <li key={item.name}>
+                            <Link href={item.link} className="hover:text-white transition-colors duration-200 drop-shadow-sm">
+                                {item.name}
                             </Link>
                         </li>
                     ))}
@@ -36,11 +36,6 @@ const Navbar = () => {
 
                 {/* Desktop CTAs */}
                 <div className="hidden lg:flex items-center gap-4">
-                    <Link href="/login">
-                        <button className="px-4 py-2 border border-white/20 rounded-lg text-sm text-white/90 hover:bg-white/10 backdrop-blur-sm transition-all duration-200">
-                            Sign In
-                        </button>
-                    </Link>
                     <Link href="/signup">
                         <button className="px-4 py-2 text-sm bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 shadow-lg">
                             Get Started
@@ -69,23 +64,18 @@ const Navbar = () => {
                     >
                         <ul className="flex flex-col gap-4 text-white/80 text-sm">
                             {navItems.map((item) => (
-                                <li key={item.label}>
+                                <li key={item.name}>
                                     <Link
-                                        href={item.href}
+                                        href={item.link}
                                         onClick={() => setMobileOpen(false)}
                                         className="hover:text-white transition-colors duration-200 drop-shadow-sm"
                                     >
-                                        {item.label}
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
                         <div className="flex flex-col gap-3">
-                            <Link href="/login">
-                                <button className="w-full border border-white/20 py-2 rounded-lg text-sm text-white/90 hover:bg-white/10 backdrop-blur-sm transition-all duration-200">
-                                    Sign In
-                                </button>
-                            </Link>
                             <Link href="/signup">
                                 <button className="w-full py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 text-sm transition-all duration-200 shadow-lg">
                                     Get Started
