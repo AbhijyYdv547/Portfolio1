@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { features } from "@/constants/index";
 
-const FeatureSection = () => {
+const AboutSection = () => {
     return (
         <section
             id="features"
@@ -17,13 +17,13 @@ const FeatureSection = () => {
                 viewport={{ once: true }}
             >
                 <span className="uppercase text-xs tracking-widest text-blue-500 font-semibold">
-                    Features
+                    About Me
                 </span>
                 <h2 className="text-3xl sm:text-5xl font-bold tracking-tight">
-                    Built for <span className="text-blue-500">Collaboration</span>
+                        Crafting <span className="text-blue-500">Beautiful & Functional</span> Experiences
                 </h2>
                 <p className="text-muted-foreground max-w-xl mx-auto text-base sm:text-lg">
-                    Whether you're planning, writing, or designing — do it all together, in one space.
+                    I'm a web developer who loves crafting clean, responsive interfaces and bringing ideas to life with code.
                 </p>
             </motion.div>
 
@@ -53,4 +53,4 @@ const FeatureSection = () => {
     );
 };
 
-export default FeatureSection;
+export default AboutSection;

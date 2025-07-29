@@ -1,9 +1,11 @@
-import { BotMessageSquare } from "lucide-react";
-import { BatteryCharging } from "lucide-react";
-import { Fingerprint } from "lucide-react";
-import { ShieldHalf } from "lucide-react";
-import { PlugZap } from "lucide-react";
-import { GlobeLock } from "lucide-react";
+import {
+  Code2,
+  Lightbulb,
+  Users,
+  LayoutDashboard,
+  Rocket,
+  Brain,
+} from "lucide-react";
 
 export const navItems = [
   { label: "Features", href: "#" },
@@ -54,43 +56,42 @@ export const testimonials = [
 
 export const features = [
   {
-    icon: <BotMessageSquare />,
-    text: "Drag-and-Drop Interface",
+    icon: <Code2 />,
+    text: "Clean & Efficient Code",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+      "I write scalable, maintainable code with a focus on performance and best practices.",
   },
   {
-    icon: <Fingerprint />,
-    text: "Multi-Platform Compatibility",
+    icon: <Lightbulb />,
+    text: "Creative Problem Solving",
     description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+      "I enjoy tackling challenges with a mix of logic, creativity, and curiosity.",
   },
   {
-    icon: <ShieldHalf />,
-    text: "Built-in Templates",
+    icon: <Users />,
+    text: "Team Collaboration",
     description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+      "I'm a strong communicator who thrives in collaborative environments.",
   },
   {
-    icon: <BatteryCharging />,
-    text: "Real-Time Preview",
+    icon: <LayoutDashboard />,
+    text: "UI/UX Mindset",
     description:
-      "Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.",
+      "I care about building user-friendly interfaces that are both functional and visually appealing.",
   },
   {
-    icon: <PlugZap />,
-    text: "Collaboration Tools",
+    icon: <Rocket />,
+    text: "Fast Learning",
     description:
-      "Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.",
+      "I quickly pick up new technologies and adapt to different workflows with ease.",
   },
   {
-    icon: <GlobeLock />,
-    text: "Analytics Dashboard",
+    icon: <Brain />,
+    text: "Growth-Oriented",
     description:
-      "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
+      "I'm always improving — whether it's sharpening my skills or exploring new areas of development.",
   },
 ];
-
 export const checklistItems = [
   {
     title: "Code merge made easy",
