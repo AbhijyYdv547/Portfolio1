@@ -1,9 +1,10 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Workflow from "@/components/Workflow"
-import HeroSection from "@/components/HeroSection"
+import Workflow from "@/components/Workflow";
+import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import Testimonials from "@/components/Testimonials"
+import Testimonials from "@/components/Testimonials";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto pt-20 px-6">
         <HeroSection />
         <AboutSection />
+        <Projects />
         <Workflow />
         <Testimonials />
         <Footer />
