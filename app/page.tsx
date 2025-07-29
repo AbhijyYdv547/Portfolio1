@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Workflow from "@/components/Workflow";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import Testimonials from "@/components/Testimonials";
 import Projects from "@/components/Projects";
 import { Loader } from "@/components/Loader";
 
@@ -15,7 +14,6 @@ export default function Home() {
         <AboutSection />
         <Projects />
         <Workflow />
-        <Testimonials />
       </div>
     </Loader>
   );

@@ -5,7 +5,6 @@ import { FaLocationArrow } from "react-icons/fa";
 import Image from "next/image";
 import { PinContainer } from "./ui/3d-pin";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -71,7 +70,7 @@ const Projects = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xs md:text-sm text-sm text-purple">
+                  <p className="flex lg:text-lg md:text-xs text-sm text-purple">
                     Checkout Project
                   </p>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
