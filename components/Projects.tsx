@@ -32,15 +32,13 @@ const Projects = () => {
             <PinContainer title={title} href={link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[30vh] mb-10 sm:h-[40vh]">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <Image src={img} alt="bg-img" width={800} height={500} />
+                  <Image
+                    src={img}
+                    alt={title}
+                    fill
+                    className="object-cover object-top"
+                  />
                 </div>
-                <Image
-                  src={img}
-                  alt={title}
-                  className="z-10 absolute bottom-0"
-                  width={800}
-                  height={500}
-                />
               </div>
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {title}
