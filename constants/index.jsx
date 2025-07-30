@@ -141,3 +141,18 @@ export const checklistItems = [
       "Track the performance of your VR apps and gain insights into user behavior.",
   },
 ];
+
+export const socialMedia = [
+  {
+    link: ``,
+    img: "/git.svg",
+  },
+  {
+    id: 2,
+    img: "/twit.svg",
+  },
+  {
+    id: 3,
+    img: "/link.svg",
+  },
+];

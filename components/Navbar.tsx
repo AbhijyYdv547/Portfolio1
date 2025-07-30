@@ -1,94 +1,79 @@
 "use client";
-
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  Navbar,
+  NavBody,
+  NavItems,
+  MobileNav,
+  NavbarLogo,
+  NavbarButton,
+  MobileNavHeader,
+  MobileNavToggle,
+  MobileNavMenu,
+} from "@/components/ui/resizable-navbar";
 import { navItems } from "@/constants/index";
+import Image from "next/image";
+import { useState } from "react";
 
-const Navbar = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
+export default function ResizableNav() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-100 border-b border-white/10 backdrop-blur-lg bg-white/5 supports-[backdrop-filter]:bg-white/5">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-lg" />
-            <span className="text-xl font-semibold text-white drop-shadow-sm">
-              Abhijay
-            </span>
+    <div className="w-full fixed z-100">
+      <Navbar>
+        {/* Desktop Navigation */}
+        <NavBody>
+          <NavbarLogo />
+          <NavItems items={navItems} />
+          <div className="flex items-center gap-4">
+            <NavbarButton
+              variant="primary"
+              className="flex items-center justify-center gap-1"
+              href="https://github.com/AbhijyYdv547"
+            >
+              <Image src={"/git.svg"} alt="" width={30} height={30} />
+              <span className="text-black">Github</span>
+            </NavbarButton>
           </div>
-        </Link>
+        </NavBody>
 
-        {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-center gap-10 text-sm text-white/80">
-          {navItems.map((item) => (
-            <li key={item.name}>
-              <Link
-                href={item.link}
-                className="hover:text-white transition-colors duration-200 drop-shadow-sm"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Mobile Navigation */}
+        <MobileNav>
+          <MobileNavHeader>
+            <NavbarLogo />
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
+          </MobileNavHeader>
 
-        {/* Desktop CTAs */}
-        <div className="hidden lg:flex items-center gap-4">
-          <Link href="/signup">
-            <button className="px-4 py-2 text-sm bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 shadow-lg">
-              Get Started
-            </button>
-          </Link>
-        </div>
-
-        {/* Mobile Toggle */}
-        <button
-          className="lg:hidden text-white/90 hover:text-white transition-colors duration-200"
-          onClick={() => setMobileOpen((prev) => !prev)}
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Drawer */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="lg:hidden bg-black/20 backdrop-blur-md border-t border-white/10 px-6 py-4 space-y-6"
+          <MobileNavMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
           >
-            <ul className="flex flex-col gap-4 text-white/80 text-sm">
-              {navItems.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.link}
-                    onClick={() => setMobileOpen(false)}
-                    className="hover:text-white transition-colors duration-200 drop-shadow-sm"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-col gap-3">
-              <Link href="/signup">
-                <button className="w-full py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 text-sm transition-all duration-200 shadow-lg">
-                  Get Started
-                </button>
-              </Link>
+            {navItems.map((item, idx) => (
+              <a
+                key={`mobile-link-${idx}`}
+                href={item.link}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="relative text-neutral-600 dark:text-neutral-300"
+              >
+                <span className="block">{item.name}</span>
+              </a>
+            ))}
+            <div className="flex w-full flex-col gap-4">
+              <NavbarButton
+                href="https://github.com/AbhijyYdv547"
+                onClick={() => setIsMobileMenuOpen(false)}
+                variant="primary"
+                className="flex items-center justify-center gap-1 w-full"
+              >
+                <Image src={"/git.svg"} alt="" width={30} height={30} />
+                <span className="text-black">Github</span>
+              </NavbarButton>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
+    </div>
   );
-};
-
-export default Navbar;
+}
