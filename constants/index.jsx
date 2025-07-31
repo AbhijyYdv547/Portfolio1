@@ -12,7 +12,7 @@ import {
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Approach", link: "#approach" },
+  { name: "Skills", link: "#skills" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -119,28 +119,6 @@ export const features = [
       "I'm passionate about contributing to open source and building in public — with a goal of joining programs like GSoC and LFX.",
   },
 ];
-export const checklistItems = [
-  {
-    title: "Code merge made easy",
-    description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
-  },
-  {
-    title: "Review code without worry",
-    description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
-  },
-  {
-    title: "AI Assistance to reduce time",
-    description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
-  },
-  {
-    title: "Share work in minutes",
-    description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
-  },
-];
 
 export const socialMedia = [
   {
@@ -154,5 +132,50 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
+  },
+];
+
+export const skillList = [
+  {
+    title: "Frontend",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Redux / Zustand",
+      "Vite",
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Next.js API Routes",
+      "MongoDB",
+      "PostgreSQL",
+      "Prisma ORM",
+      "REST APIs",
+      "JWT / OAuth",
+      "Zod",
+    ],
+  },
+  {
+    title: "DevOps",
+    skills: [
+      "Git & GitHub",
+      "Docker",
+      "GitHub Actions",
+      "Vercel",
+      "Netlify",
+      "AWS (EC2 / S3)",
+      "CI/CD Pipelines",
+      "Nginx (basic setup)",
+      "Monitoring",
+    ],
   },
 ];

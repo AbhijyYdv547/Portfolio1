@@ -1,9 +1,10 @@
 import ResizableNav from "@/components/Navbar";
-import Approach from "@/components/Approach";
+import Skills from "@/components/Skills";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import Projects from "@/components/Projects";
 import { Loader } from "@/components/Loader";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <Projects />
-        <Approach />
+        <Skills />
+
+        <Footer />
       </div>
     </Loader>
   );
