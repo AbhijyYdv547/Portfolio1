@@ -1,9 +1,11 @@
 import Link from "next/link"; // Correct import for Next.js
+import { Spotlight } from "@/components/ui/spotlight-new";
 
 const HeroSection = () => {
   return (
     <>
       <div className="flex flex-col items-center mt-6 lg:mt-20" id="hero">
+        <Spotlight />
         <div className=" text-center tracking-wide flex justify-center items-center flex-col gap-2.5">
           <span className="text-4xl sm:text-6xl lg:text-7xl">
             Abhijay yadav

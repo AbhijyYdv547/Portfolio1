@@ -1,5 +1,5 @@
 import ResizableNav from "@/components/Navbar";
-import Workflow from "@/components/Workflow";
+import Approach from "@/components/Approach";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import Projects from "@/components/Projects";
@@ -13,7 +13,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <Projects />
-        <Workflow />
+        <Approach />
       </div>
     </Loader>
   );
