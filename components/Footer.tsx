@@ -1,35 +1,29 @@
-import React from "react";
-import { socialMedia } from "@/constants/index";
-import Image from "next/image";
+import { FaLocationArrow } from "react-icons/fa";
+import MagicButton from "./ui/magic-button";
 
 const Footer = () => {
   return (
-    <footer className="w-full mb-[100px] pb-10 md:mb-5" id="contact">
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
+    <footer className="w-full pb-10 md:pb-6 mb-24 md:mb-10 mt-10" id="contact">
+      <div className="flex flex-col items-center text-center px-4">
+        <h1 className="text-2xl md:text-3xl font-semibold leading-tight md:leading-snug max-w-2xl">
+          Ready to take <span className="text-blue-500">your</span> digital
           presence to the next level?
         </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
+        <p className="text-gray-400 mt-4 md:mt-6 text-sm md:text-base max-w-md">
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
+        <a href="mailto:yadavabhijay@gmail.com">
+          <MagicButton
+            title="Let's get in touch"
+            icon={<FaLocationArrow />}
+            position="right"
+          />
+        </a>
       </div>
 
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright &copy; 2025 Abhijay
-        </p>
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((profile) => (
-            <div
-              key={profile.title}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <Image src={""} alt={""} width={20} height={20} />
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-col md:flex-row justify-between items-center mt-12 px-4 text-sm text-gray-500">
+        <p>© 2025 Abhijay</p>
       </div>
     </footer>
   );
