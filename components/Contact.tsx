@@ -33,7 +33,7 @@ const Contact = () => {
             icon={s.icon}
             position="left"
             handleClick={() => {
-              window.open(s.link, "_blank");
+              window.open(s.link, "_blank", "noopener,noreferrer");
             }}
           />
         ))}

@@ -30,7 +30,11 @@ const HeroSection = () => {
             icon={<GitBranch />}
             position="left"
             handleClick={() => {
-              window.open("https://github.com/AbhijyYdv547", "_blank");
+              window.open(
+                "https://github.com/AbhijyYdv547",
+                "_blank",
+                "noopener,noreferrer",
+              );
             }}
           />
           <MagicButton
@@ -42,6 +46,7 @@ const HeroSection = () => {
               window.open(
                 "https://drive.google.com/file/d/1AVA8EMPnziz6XAfmy0xpu1Yh0dqyRC0b/view?usp=sharing",
                 "_blank",
+                "noopener,noreferrer",
               );
             }}
           />
