@@ -1,6 +1,4 @@
 import React from "react";
-import MagicButton from "./ui/magic-button";
-import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/constants/index";
 import Image from "next/image";
 
@@ -16,13 +14,6 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:yadavabhijay@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
       </div>
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
@@ -32,10 +23,10 @@ const Footer = () => {
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((profile) => (
             <div
-              key={profile.id}
+              key={profile.title}
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <Image src={profile.img} alt={""} width={20} height={20} />
+              <Image src={""} alt={""} width={20} height={20} />
             </div>
           ))}
         </div>

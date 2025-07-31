@@ -26,16 +26,16 @@ export default function Skills() {
           Skills <span className="text-blue-500">Acquired </span> by Me
         </h2>
       </motion.div>
-      <div className="flex gap-5 flex-auto">
+      <div className="flex flex-col gap-5 md:flex-row lg:flex-row">
         {skillList.map((s) => (
           <div
             key={s.title}
             className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden flex-1"
           >
             <Grid size={30} />
-            <p className="text-2xl font-bold text-neutral-800 dark:text-white relative z-20 text-center">
+            <span className="text-2xl font-bold text-neutral-800 dark:text-white relative z-20 text-center">
               {s.title}
-            </p>
+            </span>
             {s.skills.map((a, idx) => (
               <p
                 key={idx}
@@ -55,7 +55,7 @@ const Step = ({ title }: { title: string }) => {
   return (
     <li className="flex gap-2 items-start">
       <ArrowBigRightDash />
-      <p className="text-white">{title}</p>
+      <span className="text-white">{title}</span>
     </li>
   );
 };

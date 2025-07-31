@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import Projects from "@/components/Projects";
 import { Loader } from "@/components/Loader";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <AboutSection />
         <Projects />
         <Skills />
-
+        <Contact />
         <Footer />
       </div>
     </Loader>
