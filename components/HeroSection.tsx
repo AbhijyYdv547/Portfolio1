@@ -1,7 +1,8 @@
 "use client";
 
+import { BackgroundBeams } from "./ui/background-beams";
 import MagicButton from "./ui/magic-button";
-import { FileText, GitBranch } from "lucide-react";
+import { Code2, GitBranch } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -37,12 +38,12 @@ const HeroSection = () => {
           />
           <MagicButton
             key={2}
-            title={"My Resume"}
-            icon={<FileText />}
+            title={"My Leetcode"}
+            icon={<Code2 />}
             position="left"
             handleClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1AVA8EMPnziz6XAfmy0xpu1Yh0dqyRC0b/view?usp=sharing",
+                "https://leetcode.com/u/ydv_abhijay_21",
                 "_blank",
                 "noopener,noreferrer",
               );
@@ -52,6 +53,7 @@ const HeroSection = () => {
       </div>
 
       <div className="py-24 bg-background text-foreground border-b border-border"></div>
+      <BackgroundBeams />
     </>
   );
 };

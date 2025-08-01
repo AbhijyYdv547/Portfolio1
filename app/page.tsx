@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import { Loader } from "@/components/Loader";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Home() {
   return (
