@@ -1,6 +1,5 @@
 "use client";
 
-import { Spotlight } from "@/components/ui/spotlight-new";
 import MagicButton from "./ui/magic-button";
 import { FileText, GitBranch } from "lucide-react";
 
@@ -11,7 +10,6 @@ const HeroSection = () => {
         className="flex flex-col items-center mt-12 sm:mt-16 lg:mt-24 text-center"
         id="hero"
       >
-        <Spotlight />
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold">
           Abhijay Yadav
         </h1>
