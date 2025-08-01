@@ -2,10 +2,17 @@
 
 import { socialMedia } from "@/constants";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import MagicButton from "./ui/magic-button";
+import { IoCopyOutline } from "react-icons/io5";
 
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    const text = "yadavabhijay@gmail.com";
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+  };
   return (
     <div
       className="py-20 border-b border-border flex flex-col gap-5"
@@ -37,6 +44,12 @@ const Contact = () => {
             }}
           />
         ))}
+        <MagicButton
+          title={copied ? "Email is Copied!" : "Copy my email address"}
+          icon={<IoCopyOutline />}
+          position="left"
+          handleClick={handleCopy}
+        />
       </div>
     </div>
   );
