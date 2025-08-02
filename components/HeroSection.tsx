@@ -1,8 +1,8 @@
 "use client";
 
 import { BackgroundBeams } from "./ui/background-beams";
+import { heroLinks } from "@/constants/index";
 import MagicButton from "./ui/magic-button";
-import { Code2, GitBranch } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -23,32 +23,17 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-wrap justify-center mt-8 gap-4">
-          <MagicButton
-            key={1}
-            title={"My Github"}
-            icon={<GitBranch />}
-            position="left"
-            handleClick={() => {
-              window.open(
-                "https://github.com/AbhijyYdv547",
-                "_blank",
-                "noopener,noreferrer",
-              );
-            }}
-          />
-          <MagicButton
-            key={2}
-            title={"My Leetcode"}
-            icon={<Code2 />}
-            position="left"
-            handleClick={() => {
-              window.open(
-                "https://leetcode.com/u/ydv_abhijay_21",
-                "_blank",
-                "noopener,noreferrer",
-              );
-            }}
-          />
+          {heroLinks.map((s) => (
+            <MagicButton
+              key={s.id}
+              title={s.title}
+              icon={s.icon}
+              position="left"
+              handleClick={() => {
+                window.open(s.link, "_blank", "noopener,noreferrer");
+              }}
+            />
+          ))}
         </div>
       </div>
 

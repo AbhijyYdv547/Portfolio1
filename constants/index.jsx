@@ -20,6 +20,21 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
+export const heroLinks = [
+  {
+    id: 1,
+    link: "https://github.com/AbhijyYdv547",
+    title: "My Github",
+    icon: <GitBranch />,
+  },
+  {
+    id: 2,
+    link: "https://leetcode.com/u/ydv_abhijay_21",
+    title: "My Leetcode",
+    icon: <Code2 />,
+  },
+];
+
 export const projects = [
   {
     id: 1,
