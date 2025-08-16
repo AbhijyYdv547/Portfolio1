@@ -76,7 +76,7 @@ export const projects = [
       "/mongo.svg",
       "gemini.svg",
     ],
-    link: "https://github.com/AbhijyYdv547/ResumeBuilder",
+    link: "https://resume-builder-frontend-beta.vercel.app/",
   },
   {
     id: 4,
