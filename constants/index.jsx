@@ -66,6 +66,20 @@ export const projects = [
   },
   {
     id: 3,
+    title: "CodeSnipVault",
+    des: "A collaborative code snippet manager with JWT authentication, search/filter options, and sharable links — built for developers to organize and share code efficiently.",
+    img: "/csv.jpg",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/go.svg",
+      "/postgres.svg",
+      "/docker.svg",
+    ],
+    link: "https://code-snip-vault.vercel.app/",
+  },
+  {
+    id: 4,
     title: "CollabCanvas - Real-time Drawing App",
     des: "A WebSocket-powered collaborative canvas app with live drawing, room-based sessions, zooming, and multiple drawing tools.",
     img: "/collabcanvas.jpg",
@@ -77,14 +91,6 @@ export const projects = [
       "/postgres.svg",
     ],
     link: "https://github.com/AbhijyYdv547/Canvas-app",
-  },
-  {
-    id: 4,
-    title: "Typora - Tally Alternative",
-    des: "A lightweight, open-source alternative to Tally for building embeddable, customizable forms — focused on performance and simplicity.",
-    img: "/code.jpg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/prisma.svg"],
-    link: "https://github.com/AbhijyYdv547/Typora",
   },
 ];
 
